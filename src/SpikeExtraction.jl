@@ -1,3 +1,4 @@
+module SpikeExtraction
 using DSP
 
 function highpass_filter(X::Array{Float64,1},sampling_rate::Float64, cutoff::Float64=300.0;method=Butterworth(4))
@@ -77,4 +78,4 @@ function extract_spikes(X::Array{Float64,1}, idx::Array{Int64,1}, n::Tuple{Int64
   end
   waveforms
 end
-
+end#mdule
