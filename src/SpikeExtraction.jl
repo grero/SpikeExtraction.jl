@@ -1,8 +1,8 @@
 module SpikeExtraction
 using DSP
 
-function highpass_filter(X::Array{Float64,1},sampling_rate::Float64, cutoff::Float64=300.0;method=Butterworth(4))
-  filtfilt(digitalfilter(Highpass(cutoff;fs=sampling_rate), method), X)
+function highpass_filter(X::Array{Float64,1},sampling_rate::Float64, cutoff::Float64=500.0/10000.0;method=Butterworth(4))
+  filtfilt(digitalfilter(Highpass(cutoff), method), X)
 end
 
 function get_threshold(X::Array{Float64,1},θ=6.0)
