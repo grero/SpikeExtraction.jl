@@ -1,4 +1,5 @@
 module SpikeExtraction
+using Statistics
 using DSP
 
 function highpass_filter(X::Array{Float64,1},sampling_rate::Float64, cutoff::Float64=500.0/10000.0;method=Butterworth(4))
