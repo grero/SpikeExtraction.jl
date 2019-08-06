@@ -70,7 +70,7 @@ function extract_spikes(X::Array{Float64,1}, idx::Array{Int64,1}, n::Tuple{Int64
     nt = length(idx)
 
     nb,na = n
-    idxl = find(x->nb < x < nx-na, idx)
+    idxl = findall(x->nb < x < nx-na, idx)
     nx = length(idxl)
     waveforms = zeros(nt, nx)
     for i in 1:nx
