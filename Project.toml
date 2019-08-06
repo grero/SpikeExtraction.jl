@@ -1,7 +1,7 @@
 name = "SpikeExtraction"
 uuid = "2ac287f9-75f0-5667-bccf-1ab644ef8eb6"
 author = ["Roger Herikstad <roger.herikstad@gmail.com>"]
-version = "v0.1.0"
+version = "v0.1.1"
 
 [deps]
 DSP = "717857b8-e6f2-59f4-9121-6e50c889abd2"
