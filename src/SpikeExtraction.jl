@@ -29,7 +29,7 @@ function extract_spikes(X::Array{Float64,1};μ::Float64=NaN, σ::Float64=NaN,nq:
   n = length(X)
   l = μ - θ*σ
   u = μ + θ*σ
-  pidx = Array{Int64}(0)
+  pidx = Int64[]
   xmin = Inf
   xmax = -Inf
   j = 1
