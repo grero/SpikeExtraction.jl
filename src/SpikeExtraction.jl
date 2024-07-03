@@ -2,6 +2,8 @@ module SpikeExtraction
 using Statistics
 using DSP
 
+include("utils.jl")
+
 function highpass_filter(X::Array{Float64,1},sampling_rate::Float64, cutoff::Float64=500.0/10000.0;method=Butterworth(4))
   filtfilt(digitalfilter(Highpass(cutoff), method), X)
 end
